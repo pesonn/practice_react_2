@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Footer from "./Footer";
 
 function Nav() {
   return (
@@ -8,10 +9,7 @@ function Nav() {
         <li className="mainnav_item">Location</li>
         <li className="mainnav_item">About</li>
       </ul>
-      <ul className="bottomnav">
-        <li className="bottomnav_item">Impressum</li>
-        <li className="bottomnav_item">Datenschutz</li>
-      </ul>
+      <Footer />
     </nav>
   );
 }
