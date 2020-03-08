@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Drinks from "./components/Drinks";
 import Footer from "./components/Footer";
+import Error from "./components/Error";
 
 function App() {
   const [title, setTitle] = useState("Lama Bar");
@@ -36,6 +37,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/drinks" component={Drinks} />
+        <Route component={Error} />
       </Switch>
       <Footer />
     </div>
