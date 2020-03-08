@@ -33,8 +33,10 @@ function App() {
       <h1 style={{ fontSize: "55px" }} className="title">
         {title}
       </h1>
-      <Home />
-      <Drinks />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/drinks" component={Drinks} />
+      </Switch>
       <Footer />
     </div>
   );

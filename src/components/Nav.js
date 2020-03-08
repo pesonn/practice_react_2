@@ -16,7 +16,12 @@ function Nav() {
   return (
     <nav style={styles}>
       <ul className="mainnav">
-        <li className="mainnav_item">Drinks</li>
+        <li className="mainnav_item">
+          <a href="/">Home</a>
+        </li>
+        <li className="mainnav_item">
+          <a href="/drinks">Drinks</a>
+        </li>
         <li className="mainnav_item">Location</li>
         <li className="mainnav_item">About</li>
       </ul>
