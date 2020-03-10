@@ -14,7 +14,7 @@ function App() {
   });
 
   // Change title according to Pathname
-  const locationTitle = useLocation().pathname.substring(1); //Return Pathname without "/"
+  const locationTitle = useLocation().pathname.substring(1); //Return pathname without "/"
   useEffect(() => {
     switch (locationTitle) {
       case "/drinks":
