@@ -12,7 +12,18 @@ function App() {
   const [showNav, setShowNav] = useState({
     isVisible: false,
   });
+
+  //Change title according to Pathname
   const locationTitle = useLocation().pathname;
+  useEffect(() => {
+    switch (locationTitle) {
+      case "/drinks":
+        setTitle("Our Drinks");
+        break;
+      default:
+        setTitle("Lama Bar");
+    }
+  });
 
   function toggleVisibility() {
     if (showNav.isVisible == true) {
@@ -27,16 +38,6 @@ function App() {
       document.body.style.overflow = "hidden";
     }
   }
-
-  useEffect(() => {
-    if (locationTitle == "/drinks") {
-      setTitle("Our Drinks");
-      console.log(1);
-    } else {
-      setTitle("Lama Bar");
-      console.log(2);
-    }
-  });
 
   return (
     <div>
