@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
@@ -12,6 +12,7 @@ function App() {
   const [showNav, setShowNav] = useState({
     isVisible: false,
   });
+  const locationTitle = useLocation().pathname;
 
   function toggleVisibility() {
     if (showNav.isVisible == true) {
@@ -26,6 +27,16 @@ function App() {
       document.body.style.overflow = "hidden";
     }
   }
+
+  useEffect(() => {
+    if (locationTitle == "/drinks") {
+      setTitle("Our Drinks");
+      console.log(1);
+    } else {
+      setTitle("Lama Bar");
+      console.log(2);
+    }
+  });
 
   return (
     <div>
