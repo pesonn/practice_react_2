@@ -13,8 +13,8 @@ function App() {
     isVisible: false,
   });
 
-  //Change title according to Pathname
-  const locationTitle = useLocation().pathname;
+  // Change title according to Pathname
+  const locationTitle = useLocation().pathname.substring(1); //Return Pathname without "/"
   useEffect(() => {
     switch (locationTitle) {
       case "/drinks":
@@ -25,6 +25,7 @@ function App() {
     }
   });
 
+  //Toggle Visibility of NavOverlay
   function toggleVisibility() {
     if (showNav.isVisible == true) {
       setShowNav({
@@ -41,6 +42,7 @@ function App() {
 
   return (
     <div>
+      {console.log(useLocation().pathname.substring(1))}
       <button onClick={toggleVisibility}>Menü</button>
       {!showNav.isVisible ? "" : <Nav />}
       <h1 style={{ fontSize: "55px" }} className="title">
