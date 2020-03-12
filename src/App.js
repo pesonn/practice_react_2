@@ -12,6 +12,8 @@ import Drinks from "./components/Drinks";
 import Footer from "./components/Footer";
 import Error from "./components/Error";
 
+import "./styles/generals.css";
+
 function App() {
   const [title, setTitle] = useState("Lama Bar");
   const [showNav, setShowNav] = useState({
@@ -28,11 +30,11 @@ function App() {
       default:
         setTitle("Lama Bar");
     }
-  });
+  }, [locationTitle]);
 
   //Toggle Visibility of NavOverlay
   function toggleVisibility() {
-    if (showNav.isVisible == true) {
+    if (showNav.isVisible === true) {
       setShowNav({
         isVisible: false,
       });
@@ -50,9 +52,7 @@ function App() {
       {console.log(useLocation().pathname.substring(1))}
       <button onClick={toggleVisibility}>Menü</button>
       {!showNav.isVisible ? "" : <Nav />}
-      <h1 style={{ fontSize: "55px" }} className="title">
-        {title}
-      </h1>
+      <h1 className="title">{title}</h1>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/drinks" component={Drinks} />
