@@ -50,7 +50,6 @@ function App() {
 
   return (
     <div>
-      {console.log(useLocation().pathname.substring(1))}
       <BurgermenuIcon toggleNav={toggleVisibility} />
       {!showNav.isVisible ? "" : <Nav />}
       <h1 className="title">{title}</h1>
