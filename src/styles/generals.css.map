@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,EAAE,CAAC;EACD,SAAS,EAAE,KAAK;CACjB",
+    "mappings": "AAAA,+EAA+E;AAC/E,+EAA+E;AAC/E,+EAA+E",
     "sources": [
         "../sass/generals.scss"
     ],

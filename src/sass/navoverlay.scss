@@ -1,2 +1,34 @@
-h1 {
+@use "./_index";
+
+nav {
+  position: absolut;
+  top: 0px;
+  left: 0px;
+  z-index: 999999;
+  height: 100vh;
+  width: 100vw;
+  background-color: index.$primary-color;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    li,
+    a,
+    a:visited {
+      color: index.$primary-font-color;
+      font-family: index.$font-nav;
+      font-size: 4.5rem;
+      margin-bottom: 80px;
+      text-decoration-line: none;
+      transition: font-size 250ms;
+    }
+    a {
+      &:hover {
+        cursor: pointer;
+        font-size: 5.5rem;
+      }
+    }
+  }
 }

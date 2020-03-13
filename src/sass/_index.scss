@@ -1,43 +1,22 @@
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++    COLORS   ++++++++++++++++++++++++++++++ */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+$primary-color: #ffce57;
+
+$primary-font-color: #000;
+
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* +++++++++++++++++++++++++++++++   FONTS   +++++++++++++++++++++++++++++++ */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 @font-face {
   font-family: "Kumar One", cursive;
   src: local("Kumar One"), url("../fonts/Kumar_One/KumarOne-Regular.ttf");
 }
+
+$font-nav: "Kumar One";
+
 html {
   font-size: 20px;
 }
-
-nav {
-  position: absolut;
-  top: 0px;
-  left: 0px;
-  z-index: 999999;
-  height: 100vh;
-  width: 100vw;
-  background-color: #ffce57;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-nav ul li,
-nav ul a,
-nav ul a:visited {
-  color: #000;
-  font-family: "Kumar One";
-  font-size: 4.5rem;
-  margin-bottom: 80px;
-  text-decoration-line: none;
-  transition: font-size 250ms;
-}
-nav ul a:hover {
-  cursor: pointer;
-  font-size: 5.5rem;
-}
-
-/*# sourceMappingURL=navoverlay.css.map */
