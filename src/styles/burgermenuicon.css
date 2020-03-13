@@ -100,6 +100,7 @@ html {
   position: absolute;
   right: 5%;
   top: 3%;
+  z-index: calc(999999 + 1);
 }
 .burgermenu--button {
   height: calc(0.15rem * 10);
