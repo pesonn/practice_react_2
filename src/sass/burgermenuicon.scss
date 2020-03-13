@@ -2,24 +2,48 @@
 
 $burger-lineheight: 0.15rem;
 
-.burgermenu--button {
-  height: calc(#{$burger-lineheight} * 10);
-  width: calc(#{$burger-lineheight} * 11);
-  .burgermenu--line {
-    height: $burger-lineheight;
-    width: calc(#{$burger-lineheight} * 11);
-    position: absolute;
-    background-color: #000;
+$burger-folding-time: 400ms;
 
-    &:nth-child(1) {
-      top: $burger-lineheight; //==
-    }
-    &:nth-child(2) {
-      top: calc(#{$burger-lineheight} * 4);
-    }
-    &:nth-child(3) {
-      top: calc(#{$burger-lineheight} * 7);
-    }
+@keyframes toptomiddle {
+  0% {
+    top: $burger-lineheight;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(0deg);
+  }
+  100% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes middledisappear {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes bottomiddle {
+  //bottomiddle means "Bottom to Middle" ;D
+  0% {
+    top: calc(#{$burger-lineheight} * 7);
+    transform: rotate(0deg);
+  }
+  50% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(0deg);
+  }
+  100% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(-45deg);
   }
 }
 
@@ -27,4 +51,38 @@ $burger-lineheight: 0.15rem;
   position: absolute;
   right: 5%;
   top: 3%;
+
+  &--button {
+    height: calc(#{$burger-lineheight} * 10);
+    width: calc(#{$burger-lineheight} * 11);
+  }
+
+  &--line {
+    height: $burger-lineheight;
+    width: calc(#{$burger-lineheight} * 11);
+    position: absolute;
+    background-color: index.$primary-font-color;
+
+    &:nth-child(1) {
+      top: $burger-lineheight;
+      &.crossed {
+        animation: toptomiddle $burger-folding-time ease-in forwards;
+      }
+    }
+
+    &:nth-child(2) {
+      top: calc(#{$burger-lineheight} * 4);
+      &.crossed {
+        animation: middledisappear $burger-folding-time ease-in forwards;
+      }
+    }
+
+    &:nth-child(3) {
+      top: calc(#{$burger-lineheight} * 7);
+
+      &.crossed {
+        animation: bottomiddle $burger-folding-time ease-in forwards;
+      }
+    }
+  }
 }

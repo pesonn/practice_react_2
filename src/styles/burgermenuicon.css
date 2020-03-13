@@ -16,30 +16,77 @@ html {
   font-size: 20px;
 }
 
+@keyframes toptomiddle {
+  0% {
+    top: 0.15rem;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: calc(0.15rem * 4);
+    transform: rotate(0deg);
+  }
+  100% {
+    top: calc(0.15rem * 4);
+    transform: rotate(45deg);
+  }
+}
+@keyframes middledisappear {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes bottomiddle {
+  0% {
+    top: calc(0.15rem * 7);
+    transform: rotate(0deg);
+  }
+  50% {
+    top: calc(0.15rem * 4);
+    transform: rotate(0deg);
+  }
+  100% {
+    top: calc(0.15rem * 4);
+    transform: rotate(-45deg);
+  }
+}
+.burgermenu {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}
 .burgermenu--button {
   height: calc(0.15rem * 10);
   width: calc(0.15rem * 11);
 }
-.burgermenu--button .burgermenu--line {
+.burgermenu--line {
   height: 0.15rem;
   width: calc(0.15rem * 11);
   position: absolute;
   background-color: #000;
 }
-.burgermenu--button .burgermenu--line:nth-child(1) {
+.burgermenu--line:nth-child(1) {
   top: 0.15rem;
 }
-.burgermenu--button .burgermenu--line:nth-child(2) {
+.burgermenu--line:nth-child(1).crossed {
+  animation: toptomiddle 400ms ease-in forwards;
+}
+.burgermenu--line:nth-child(2) {
   top: calc(0.15rem * 4);
 }
-.burgermenu--button .burgermenu--line:nth-child(3) {
+.burgermenu--line:nth-child(2).crossed {
+  animation: middledisappear 400ms ease-in forwards;
+}
+.burgermenu--line:nth-child(3) {
   top: calc(0.15rem * 7);
 }
-
-.burgermenu {
-  position: absolute;
-  right: 5%;
-  top: 3%;
+.burgermenu--line:nth-child(3).crossed {
+  animation: bottomiddle 400ms ease-in forwards;
 }
 
 /*# sourceMappingURL=burgermenuicon.css.map */
