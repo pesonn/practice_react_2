@@ -1,0 +1,30 @@
+@use "./index";
+
+$burger-lineheight: 0.15rem;
+
+.burgermenu--button {
+  height: calc(#{$burger-lineheight} * 10);
+  width: calc(#{$burger-lineheight} * 11);
+  .burgermenu--line {
+    height: $burger-lineheight;
+    width: calc(#{$burger-lineheight} * 11);
+    position: absolute;
+    background-color: #000;
+
+    &:nth-child(1) {
+      top: $burger-lineheight; //==
+    }
+    &:nth-child(2) {
+      top: calc(#{$burger-lineheight} * 4);
+    }
+    &:nth-child(3) {
+      top: calc(#{$burger-lineheight} * 7);
+    }
+  }
+}
+
+.burgermenu {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}

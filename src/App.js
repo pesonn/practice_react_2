@@ -10,27 +10,16 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Drinks from "./components/Drinks";
 import Footer from "./components/Footer";
+import BurgermenuIcon from "./components/BurgermenuIcon";
 import Error from "./components/Error";
 
-import "./styles/generals.css";
+import "./styles/App.css";
 
 function App() {
   const [title, setTitle] = useState("Lama Bar");
   const [showNav, setShowNav] = useState({
     isVisible: false,
   });
-
-  // Change title according to Pathname
-  const locationTitle = useLocation().pathname.substring(1); //Return pathname without "/"
-  useEffect(() => {
-    switch (locationTitle) {
-      case "/drinks":
-        setTitle("Our Drinks");
-        break;
-      default:
-        setTitle("Lama Bar");
-    }
-  }, [locationTitle]);
 
   //Toggle Visibility of NavOverlay
   function toggleVisibility() {
@@ -47,10 +36,22 @@ function App() {
     }
   }
 
+  // Change title according to Pathname
+  const locationTitle = useLocation().pathname.substring(1); //Return pathname without "/"
+  useEffect(() => {
+    switch (locationTitle) {
+      case "/drinks":
+        setTitle("Our Drinks");
+        break;
+      default:
+        setTitle("Lama Bar");
+    }
+  }, [locationTitle]);
+
   return (
     <div>
       {console.log(useLocation().pathname.substring(1))}
-      <button onClick={toggleVisibility}>Menü</button>
+      <BurgermenuIcon toggleNav={toggleVisibility} />
       {!showNav.isVisible ? "" : <Nav />}
       <h1 className="title">{title}</h1>
       <Switch>

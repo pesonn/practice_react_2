@@ -1,0 +1,45 @@
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++    COLORS   ++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++   FONTS   +++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+@font-face {
+  font-family: "Kumar One";
+  src: local("Kumar One"), url("../fonts/Kumar_One/KumarOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Abel";
+  src: local("Abel"), url("../fonts/Abel/Abel-Regular.ttf") format("truetype");
+}
+html {
+  font-size: 20px;
+}
+
+.burgermenu--button {
+  height: calc(0.15rem * 10);
+  width: calc(0.15rem * 11);
+}
+.burgermenu--button .burgermenu--line {
+  height: 0.15rem;
+  width: calc(0.15rem * 11);
+  position: absolute;
+  background-color: #000;
+}
+.burgermenu--button .burgermenu--line:nth-child(1) {
+  top: 0.15rem;
+}
+.burgermenu--button .burgermenu--line:nth-child(2) {
+  top: calc(0.15rem * 4);
+}
+.burgermenu--button .burgermenu--line:nth-child(3) {
+  top: calc(0.15rem * 7);
+}
+
+.burgermenu {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}
+
+/*# sourceMappingURL=burgermenuicon.css.map */
