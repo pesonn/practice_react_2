@@ -16,6 +16,7 @@ html {
   font-size: 20px;
 }
 
+/* ++++++++++++++++++++++++++++++ to CROSS Menu ++++++++++++++++++++++++++++ */
 @keyframes toptomiddle {
   0% {
     top: 0.15rem;
@@ -41,7 +42,7 @@ html {
     visibility: hidden;
   }
 }
-@keyframes bottomiddle {
+@keyframes bottomtomiddle {
   0% {
     top: calc(0.15rem * 7);
     transform: rotate(0deg);
@@ -51,6 +52,46 @@ html {
     transform: rotate(0deg);
   }
   100% {
+    top: calc(0.15rem * 4);
+    transform: rotate(-45deg);
+  }
+}
+/* +++++++++++++++++++++++++++++ to FLATTEN Menu +++++++++++++++++++++++++++ */
+@keyframes toptotop {
+  100% {
+    top: 0.15rem;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: calc(0.15rem * 4);
+    transform: rotate(0deg);
+  }
+  0% {
+    top: calc(0.15rem * 4);
+    transform: rotate(45deg);
+  }
+}
+@keyframes middleappear {
+  100% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  0% {
+    visibility: hidden;
+  }
+}
+@keyframes bottomtobottom {
+  100% {
+    top: calc(0.15rem * 7);
+    transform: rotate(0deg);
+  }
+  50% {
+    top: calc(0.15rem * 4);
+    transform: rotate(0deg);
+  }
+  0% {
     top: calc(0.15rem * 4);
     transform: rotate(-45deg);
   }
@@ -76,17 +117,26 @@ html {
 .burgermenu--line:nth-child(1).crossed {
   animation: toptomiddle 400ms ease-in forwards;
 }
+.burgermenu--line:nth-child(1).flat {
+  animation: toptotop 400ms ease-in forwards;
+}
 .burgermenu--line:nth-child(2) {
   top: calc(0.15rem * 4);
 }
 .burgermenu--line:nth-child(2).crossed {
   animation: middledisappear 400ms ease-in forwards;
 }
+.burgermenu--line:nth-child(2).flat {
+  animation: middleappear 400ms ease-in forwards;
+}
 .burgermenu--line:nth-child(3) {
   top: calc(0.15rem * 7);
 }
 .burgermenu--line:nth-child(3).crossed {
-  animation: bottomiddle 400ms ease-in forwards;
+  animation: bottomtomiddle 400ms ease-in forwards;
+}
+.burgermenu--line:nth-child(3).flat {
+  animation: bottomtobottom 400ms ease-in forwards;
 }
 
 /*# sourceMappingURL=burgermenuicon.css.map */

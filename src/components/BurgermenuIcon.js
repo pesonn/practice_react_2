@@ -11,11 +11,13 @@ function BurgermenuIcon(props) {
       const lineclass = document.querySelectorAll(".burgermenu--line");
       for (let i = 0; i < lineclass.length; i++) {
         lineclass[i].classList.add("crossed");
+        lineclass[i].classList.remove("flat");
       }
     } else {
       setCrossed(false);
       const lineclass = document.querySelectorAll(".burgermenu--line");
       for (let i = 0; i < lineclass.length; i++) {
+        lineclass[i].classList.add("flat");
         lineclass[i].classList.remove("crossed");
       }
     }

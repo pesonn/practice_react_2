@@ -1,9 +1,9 @@
 @use "./index";
 
 $burger-lineheight: 0.15rem;
-
 $burger-folding-time: 400ms;
 
+/* ++++++++++++++++++++++++++++++ to CROSS Menu ++++++++++++++++++++++++++++ */
 @keyframes toptomiddle {
   0% {
     top: $burger-lineheight;
@@ -31,8 +31,7 @@ $burger-folding-time: 400ms;
   }
 }
 
-@keyframes bottomiddle {
-  //bottomiddle means "Bottom to Middle" ;D
+@keyframes bottomtomiddle {
   0% {
     top: calc(#{$burger-lineheight} * 7);
     transform: rotate(0deg);
@@ -47,10 +46,54 @@ $burger-folding-time: 400ms;
   }
 }
 
+/* +++++++++++++++++++++++++++++ to FLATTEN Menu +++++++++++++++++++++++++++ */
+@keyframes toptotop {
+  100% {
+    top: $burger-lineheight;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(0deg);
+  }
+  0% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes middleappear {
+  100% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  0% {
+    visibility: hidden;
+  }
+}
+
+@keyframes bottomtobottom {
+  100% {
+    top: calc(#{$burger-lineheight} * 7);
+    transform: rotate(0deg);
+  }
+  50% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(0deg);
+  }
+  0% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(-45deg);
+  }
+}
+
 .burgermenu {
   position: absolute;
   right: 5%;
   top: 3%;
+  z-index: calc(999999 + 1);
 
   &--button {
     height: calc(#{$burger-lineheight} * 10);
@@ -68,6 +111,9 @@ $burger-folding-time: 400ms;
       &.crossed {
         animation: toptomiddle $burger-folding-time ease-in forwards;
       }
+      &.flat {
+        animation: toptotop $burger-folding-time ease-in forwards;
+      }
     }
 
     &:nth-child(2) {
@@ -75,13 +121,19 @@ $burger-folding-time: 400ms;
       &.crossed {
         animation: middledisappear $burger-folding-time ease-in forwards;
       }
+      &.flat {
+        animation: middleappear $burger-folding-time ease-in forwards;
+      }
     }
 
     &:nth-child(3) {
       top: calc(#{$burger-lineheight} * 7);
 
       &.crossed {
-        animation: bottomiddle $burger-folding-time ease-in forwards;
+        animation: bottomtomiddle $burger-folding-time ease-in forwards;
+      }
+      &.flat {
+        animation: bottomtobottom $burger-folding-time ease-in forwards;
       }
     }
   }
