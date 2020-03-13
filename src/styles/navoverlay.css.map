@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/navoverlay.scss"
+    ],
+    "names": [],
+    "file": "navoverlay.css"
+}
