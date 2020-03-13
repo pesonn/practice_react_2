@@ -97,7 +97,7 @@ html {
   }
 }
 .burgermenu {
-  position: absolute;
+  position: fixed;
   right: 5%;
   top: 3%;
   z-index: calc(999999 + 1);
