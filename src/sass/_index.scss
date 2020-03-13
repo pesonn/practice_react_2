@@ -16,7 +16,14 @@ $primary-font-color: #000;
     url("../fonts/Kumar_One/KumarOne-Regular.ttf") format("truetype");
 }
 
-$font-nav: "Kumar One";
+@font-face {
+  font-family: "Abel";
+  src: local("Abel"), url("../fonts/Abel/Abel-Regular.ttf") format("truetype");
+}
+
+$font-title: "Kumar One";
+
+$font-nav: "Abel";
 
 html {
   font-size: 20px;

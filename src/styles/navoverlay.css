@@ -6,7 +6,12 @@
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @font-face {
   font-family: "Kumar One";
-  src: local("Kumar One"), url("../fonts/Kumar_One/KumarOne-Regular.ttf") format("truetype");
+  src: local("Kumar One"),
+    url("../fonts/Kumar_One/KumarOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Abel";
+  src: local("Abel"), url("../fonts/Abel/Abel-Regular.ttf") format("truetype");
 }
 html {
   font-size: 20px;
@@ -21,23 +26,26 @@ nav {
   width: 100vw;
   background-color: #ffce57;
   overflow: hidden;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
   justify-content: center;
 }
 nav ul li,
 nav ul a,
 nav ul a:visited {
   color: #000;
-  font-family: "Kumar One";
+  font-family: "Abel";
   font-size: 4.5rem;
   margin-bottom: 80px;
+  -webkit-text-decoration-line: none;
   text-decoration-line: none;
+  -webkit-transition: font-size 250ms;
   transition: font-size 250ms;
 }
 nav ul a:hover {
   cursor: pointer;
-  font-size: 5.5rem;
+  font-size: 5rem;
 }
-
-/*# sourceMappingURL=navoverlay.css.map */

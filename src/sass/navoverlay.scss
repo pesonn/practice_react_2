@@ -9,8 +9,11 @@ nav {
   width: 100vw;
   background-color: index.$primary-color;
   overflow: hidden;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
   justify-content: center;
 
   ul {
@@ -21,13 +24,15 @@ nav {
       font-family: index.$font-nav;
       font-size: 4.5rem;
       margin-bottom: 80px;
+      -webkit-text-decoration-line: none;
       text-decoration-line: none;
+      -webkit-transition: font-size 250ms;
       transition: font-size 250ms;
     }
     a {
       &:hover {
         cursor: pointer;
-        font-size: 5.5rem;
+        font-size: 5rem;
       }
     }
   }
