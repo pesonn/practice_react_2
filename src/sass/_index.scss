@@ -11,8 +11,9 @@ $primary-font-color: #000;
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 @font-face {
-  font-family: "Kumar One", cursive;
-  src: local("Kumar One"), url("../fonts/Kumar_One/KumarOne-Regular.ttf");
+  font-family: "Kumar One";
+  src: local("Kumar One"),
+    url("../fonts/Kumar_One/KumarOne-Regular.ttf") format("truetype");
 }
 
 $font-nav: "Kumar One";
