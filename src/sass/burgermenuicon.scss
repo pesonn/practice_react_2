@@ -1,7 +1,7 @@
 @use "./index";
 
 $burger-lineheight: 0.15rem;
-$burger-folding-time: 400ms;
+$burger-folding-time: 550ms;
 
 $burger-color-flat: index.$primary-font-color;
 $burger-color-crossed: index.$primary-font-color;
@@ -17,7 +17,12 @@ $burger-color-crossed: index.$primary-font-color;
     transform: rotate(0deg);
     background-color: $burger-color-flat;
   }
-  50% {
+  30% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(0deg);
+    background-color: $burger-color-crossed;
+  }
+  70% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(0deg);
     background-color: $burger-color-crossed;
@@ -34,7 +39,11 @@ $burger-color-crossed: index.$primary-font-color;
     visibility: visible;
     background-color: $burger-color-flat;
   }
-  50% {
+  30% {
+    visibility: hidden;
+    background-color: $burger-color-crossed;
+  }
+  70% {
     visibility: hidden;
     background-color: $burger-color-crossed;
   }
@@ -50,7 +59,12 @@ $burger-color-crossed: index.$primary-font-color;
     transform: rotate(0deg);
     background-color: $burger-color-flat;
   }
-  50% {
+  30% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(0deg);
+    background-color: $burger-color-crossed;
+  }
+  70% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(0deg);
     background-color: $burger-color-crossed;
@@ -69,7 +83,12 @@ $burger-color-crossed: index.$primary-font-color;
     transform: rotate(0deg);
     background-color: $burger-color-flat;
   }
-  50% {
+  70% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(0deg);
+    background-color: $burger-color-flat;
+  }
+  30% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(0deg);
     background-color: $burger-color-flat;
@@ -86,7 +105,11 @@ $burger-color-crossed: index.$primary-font-color;
     visibility: visible;
     background-color: $burger-color-flat;
   }
-  50% {
+  70% {
+    visibility: hidden;
+    background-color: $burger-color-flat;
+  }
+  30% {
     visibility: hidden;
     background-color: $burger-color-flat;
   }
@@ -102,7 +125,12 @@ $burger-color-crossed: index.$primary-font-color;
     transform: rotate(0deg);
     background-color: $burger-color-flat;
   }
-  50% {
+  70% {
+    top: calc(#{$burger-lineheight} * 4);
+    transform: rotate(0deg);
+    background-color: $burger-color-flat;
+  }
+  30% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(0deg);
     background-color: $burger-color-flat;

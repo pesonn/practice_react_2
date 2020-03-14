@@ -26,7 +26,12 @@ html {
     transform: rotate(0deg);
     background-color: #000;
   }
-  50% {
+  30% {
+    top: calc(0.15rem * 4);
+    transform: rotate(0deg);
+    background-color: #000;
+  }
+  70% {
     top: calc(0.15rem * 4);
     transform: rotate(0deg);
     background-color: #000;
@@ -42,7 +47,11 @@ html {
     visibility: visible;
     background-color: #000;
   }
-  50% {
+  30% {
+    visibility: hidden;
+    background-color: #000;
+  }
+  70% {
     visibility: hidden;
     background-color: #000;
   }
@@ -57,7 +66,12 @@ html {
     transform: rotate(0deg);
     background-color: #000;
   }
-  50% {
+  30% {
+    top: calc(0.15rem * 4);
+    transform: rotate(0deg);
+    background-color: #000;
+  }
+  70% {
     top: calc(0.15rem * 4);
     transform: rotate(0deg);
     background-color: #000;
@@ -75,7 +89,12 @@ html {
     transform: rotate(0deg);
     background-color: #000;
   }
-  50% {
+  70% {
+    top: calc(0.15rem * 4);
+    transform: rotate(0deg);
+    background-color: #000;
+  }
+  30% {
     top: calc(0.15rem * 4);
     transform: rotate(0deg);
     background-color: #000;
@@ -91,7 +110,11 @@ html {
     visibility: visible;
     background-color: #000;
   }
-  50% {
+  70% {
+    visibility: hidden;
+    background-color: #000;
+  }
+  30% {
     visibility: hidden;
     background-color: #000;
   }
@@ -106,7 +129,12 @@ html {
     transform: rotate(0deg);
     background-color: #000;
   }
-  50% {
+  70% {
+    top: calc(0.15rem * 4);
+    transform: rotate(0deg);
+    background-color: #000;
+  }
+  30% {
     top: calc(0.15rem * 4);
     transform: rotate(0deg);
     background-color: #000;
@@ -140,28 +168,28 @@ html {
   top: 0.15rem;
 }
 .burgermenu--line:nth-child(1).crossed {
-  animation: toptomiddle 400ms ease-in forwards;
+  animation: toptomiddle 550ms ease-in forwards;
 }
 .burgermenu--line:nth-child(1).flat {
-  animation: toptotop 400ms ease-in forwards;
+  animation: toptotop 550ms ease-in forwards;
 }
 .burgermenu--line:nth-child(2) {
   top: calc(0.15rem * 4);
 }
 .burgermenu--line:nth-child(2).crossed {
-  animation: middledisappear 400ms ease-in forwards;
+  animation: middledisappear 550ms ease-in forwards;
 }
 .burgermenu--line:nth-child(2).flat {
-  animation: middleappear 400ms ease-in forwards;
+  animation: middleappear 550ms ease-in forwards;
 }
 .burgermenu--line:nth-child(3) {
   top: calc(0.15rem * 7);
 }
 .burgermenu--line:nth-child(3).crossed {
-  animation: bottomtomiddle 400ms ease-in forwards;
+  animation: bottomtomiddle 550ms ease-in forwards;
 }
 .burgermenu--line:nth-child(3).flat {
-  animation: bottomtobottom 400ms ease-in forwards;
+  animation: bottomtobottom 550ms ease-in forwards;
 }
 
 /*# sourceMappingURL=burgermenuicon.css.map */
