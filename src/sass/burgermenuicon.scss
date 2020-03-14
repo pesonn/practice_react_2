@@ -3,31 +3,44 @@
 $burger-lineheight: 0.15rem;
 $burger-folding-time: 400ms;
 
+$burger-color-flat: index.$primary-font-color;
+$burger-color-crossed: index.$primary-font-color;
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++    KEYFRAMES   ++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 /* ++++++++++++++++++++++++++++++ to CROSS Menu ++++++++++++++++++++++++++++ */
 @keyframes toptomiddle {
   0% {
     top: $burger-lineheight;
     transform: rotate(0deg);
+    background-color: $burger-color-flat;
   }
   50% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(0deg);
+    background-color: $burger-color-crossed;
   }
   100% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(45deg);
+    background-color: $burger-color-crossed;
   }
 }
 
 @keyframes middledisappear {
   0% {
     visibility: visible;
+    background-color: $burger-color-flat;
   }
   50% {
     visibility: hidden;
+    background-color: $burger-color-crossed;
   }
   100% {
     visibility: hidden;
+    background-color: $burger-color-crossed;
   }
 }
 
@@ -35,14 +48,17 @@ $burger-folding-time: 400ms;
   0% {
     top: calc(#{$burger-lineheight} * 7);
     transform: rotate(0deg);
+    background-color: $burger-color-flat;
   }
   50% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(0deg);
+    background-color: $burger-color-crossed;
   }
   100% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(-45deg);
+    background-color: $burger-color-crossed;
   }
 }
 
@@ -51,26 +67,32 @@ $burger-folding-time: 400ms;
   100% {
     top: $burger-lineheight;
     transform: rotate(0deg);
+    background-color: $burger-color-flat;
   }
   50% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(0deg);
+    background-color: $burger-color-flat;
   }
   0% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(45deg);
+    background-color: $burger-color-crossed;
   }
 }
 
 @keyframes middleappear {
   100% {
     visibility: visible;
+    background-color: $burger-color-flat;
   }
   50% {
     visibility: hidden;
+    background-color: $burger-color-flat;
   }
   0% {
     visibility: hidden;
+    background-color: $burger-color-crossed;
   }
 }
 
@@ -78,16 +100,23 @@ $burger-folding-time: 400ms;
   100% {
     top: calc(#{$burger-lineheight} * 7);
     transform: rotate(0deg);
+    background-color: $burger-color-flat;
   }
   50% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(0deg);
+    background-color: $burger-color-flat;
   }
   0% {
     top: calc(#{$burger-lineheight} * 4);
     transform: rotate(-45deg);
+    background-color: $burger-color-crossed;
   }
 }
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++    BURGERMENU   ++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .burgermenu {
   position: fixed;

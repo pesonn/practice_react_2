@@ -16,44 +16,56 @@ html {
   font-size: 20px;
 }
 
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++    KEYFRAMES   ++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++++++++++++++++++ to CROSS Menu ++++++++++++++++++++++++++++ */
 @keyframes toptomiddle {
   0% {
     top: 0.15rem;
     transform: rotate(0deg);
+    background-color: #000;
   }
   50% {
     top: calc(0.15rem * 4);
     transform: rotate(0deg);
+    background-color: #000;
   }
   100% {
     top: calc(0.15rem * 4);
     transform: rotate(45deg);
+    background-color: #000;
   }
 }
 @keyframes middledisappear {
   0% {
     visibility: visible;
+    background-color: #000;
   }
   50% {
     visibility: hidden;
+    background-color: #000;
   }
   100% {
     visibility: hidden;
+    background-color: #000;
   }
 }
 @keyframes bottomtomiddle {
   0% {
     top: calc(0.15rem * 7);
     transform: rotate(0deg);
+    background-color: #000;
   }
   50% {
     top: calc(0.15rem * 4);
     transform: rotate(0deg);
+    background-color: #000;
   }
   100% {
     top: calc(0.15rem * 4);
     transform: rotate(-45deg);
+    background-color: #000;
   }
 }
 /* +++++++++++++++++++++++++++++ to FLATTEN Menu +++++++++++++++++++++++++++ */
@@ -61,41 +73,53 @@ html {
   100% {
     top: 0.15rem;
     transform: rotate(0deg);
+    background-color: #000;
   }
   50% {
     top: calc(0.15rem * 4);
     transform: rotate(0deg);
+    background-color: #000;
   }
   0% {
     top: calc(0.15rem * 4);
     transform: rotate(45deg);
+    background-color: #000;
   }
 }
 @keyframes middleappear {
   100% {
     visibility: visible;
+    background-color: #000;
   }
   50% {
     visibility: hidden;
+    background-color: #000;
   }
   0% {
     visibility: hidden;
+    background-color: #000;
   }
 }
 @keyframes bottomtobottom {
   100% {
     top: calc(0.15rem * 7);
     transform: rotate(0deg);
+    background-color: #000;
   }
   50% {
     top: calc(0.15rem * 4);
     transform: rotate(0deg);
+    background-color: #000;
   }
   0% {
     top: calc(0.15rem * 4);
     transform: rotate(-45deg);
+    background-color: #000;
   }
 }
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++    BURGERMENU   ++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .burgermenu {
   position: fixed;
   right: 5%;
