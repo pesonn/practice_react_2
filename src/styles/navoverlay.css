@@ -51,9 +51,22 @@ nav ul a:hover {
 }
 nav li {
   opacity: 0;
+  transition: opacity 750ms ease-out;
+}
+nav li:nth-child(1) {
+  transition-delay: 500ms;
+}
+nav li:nth-child(2) {
+  transition-delay: 580ms;
+}
+nav li:nth-child(3) {
+  transition-delay: 660ms;
+}
+nav li:nth-child(4) {
+  transition-delay: 740ms;
 }
 nav.opened {
-  clip-path: circle(150vw at 95% 2.5%);
+  clip-path: circle(200vw at 95% 2.5%);
 }
 nav.opened li {
   opacity: 1;

@@ -40,12 +40,26 @@ nav {
 
   li {
     opacity: 0;
-    // transition: opacity 250ms;
-    // transition-delay: 800ms;
+    transition: opacity 750ms ease-out;
+    $transition-delay: 500ms;
+    $transition-delay-waiting: 80ms;
+
+    &:nth-child(1) {
+      transition-delay: ($transition-delay + ($transition-delay-waiting * 0));
+    }
+    &:nth-child(2) {
+      transition-delay: ($transition-delay + ($transition-delay-waiting * 1));
+    }
+    &:nth-child(3) {
+      transition-delay: ($transition-delay + ($transition-delay-waiting * 2));
+    }
+    &:nth-child(4) {
+      transition-delay: ($transition-delay + ($transition-delay-waiting * 3));
+    }
   }
 
   &.opened {
-    clip-path: circle(150vw at 95% 2.5%);
+    clip-path: circle(200vw at 95% 2.5%);
     & li {
       opacity: 1;
     }
