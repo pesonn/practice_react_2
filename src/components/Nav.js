@@ -9,10 +9,6 @@ function Nav(props) {
     props.toggleOpen.isVisible
       ? overlay.classList.add("opened")
       : overlay.classList.remove("opened");
-    /*  const overlayText = document.querySelectorAll(".mainnav__item");
-    props.toggleOpen.isVisible
-      ? overlayText.forEach.classList.add("opened")
-      : overlayText.forEach.classList.remove("opened"); */
   }
   useEffect(toggleOpen);
 
