@@ -24,7 +24,6 @@ function BurgermenuIcon(props) {
       }
     }
   }
-
   return (
     <div
       className="burgermenu burgermenu--button burgermenu--button__togglenav"

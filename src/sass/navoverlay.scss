@@ -15,6 +15,8 @@ nav {
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
+  clip-path: circle(75px at 95% 2.5%);
+  transition: clip-path 600ms ease-in;
 
   ul {
     li,
@@ -23,17 +25,29 @@ nav {
       color: index.$primary-font-color;
       font-family: index.$font-nav;
       font-size: 4.5rem;
+      text-align: center;
       margin-bottom: 80px;
       -webkit-text-decoration-line: none;
       text-decoration-line: none;
-      -webkit-transition: font-size 250ms;
-      transition: font-size 250ms;
     }
     a {
       &:hover {
         cursor: pointer;
         font-size: 5rem;
       }
+    }
+  }
+
+  li {
+    opacity: 0;
+    transition: opacity 250ms;
+    transition-delay: 800ms;
+  }
+
+  &.opened {
+    clip-path: circle(150vw at 95% 2.5%);
+    & li {
+      opacity: 1;
     }
   }
 }

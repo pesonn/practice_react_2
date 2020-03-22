@@ -168,28 +168,28 @@ html {
   top: 0.15rem;
 }
 .burgermenu--line:nth-child(1).crossed {
-  animation: toptomiddle 550ms ease-in forwards;
+  animation: toptomiddle 450ms ease-in forwards;
 }
 .burgermenu--line:nth-child(1).flat {
-  animation: toptotop 550ms ease-in forwards;
+  animation: toptotop 450ms ease-in forwards;
 }
 .burgermenu--line:nth-child(2) {
   top: calc(0.15rem * 4);
 }
 .burgermenu--line:nth-child(2).crossed {
-  animation: middledisappear 550ms ease-in forwards;
+  animation: middledisappear 450ms ease-in forwards;
 }
 .burgermenu--line:nth-child(2).flat {
-  animation: middleappear 550ms ease-in forwards;
+  animation: middleappear 450ms ease-in forwards;
 }
 .burgermenu--line:nth-child(3) {
   top: calc(0.15rem * 7);
 }
 .burgermenu--line:nth-child(3).crossed {
-  animation: bottomtomiddle 550ms ease-in forwards;
+  animation: bottomtomiddle 450ms ease-in forwards;
 }
 .burgermenu--line:nth-child(3).flat {
-  animation: bottomtobottom 550ms ease-in forwards;
+  animation: bottomtobottom 450ms ease-in forwards;
 }
 
 /*# sourceMappingURL=burgermenuicon.css.map */

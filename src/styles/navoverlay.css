@@ -6,8 +6,7 @@
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @font-face {
   font-family: "Kumar One";
-  src: local("Kumar One"),
-    url("../fonts/Kumar_One/KumarOne-Regular.ttf") format("truetype");
+  src: local("Kumar One"), url("../fonts/Kumar_One/KumarOne-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Abel";
@@ -32,6 +31,8 @@ nav {
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
+  clip-path: circle(75px at 95% 2.5%);
+  transition: clip-path 600ms ease-in;
 }
 nav ul li,
 nav ul a,
@@ -39,13 +40,25 @@ nav ul a:visited {
   color: #000;
   font-family: "Abel";
   font-size: 4.5rem;
+  text-align: center;
   margin-bottom: 80px;
   -webkit-text-decoration-line: none;
   text-decoration-line: none;
-  -webkit-transition: font-size 250ms;
-  transition: font-size 250ms;
 }
 nav ul a:hover {
   cursor: pointer;
   font-size: 5rem;
 }
+nav li {
+  opacity: 0;
+  transition: opacity 250ms;
+  transition-delay: 800ms;
+}
+nav.opened {
+  clip-path: circle(150vw at 95% 2.5%);
+}
+nav.opened li {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=navoverlay.css.map */

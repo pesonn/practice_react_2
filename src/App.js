@@ -51,7 +51,7 @@ function App() {
   return (
     <div>
       <BurgermenuIcon toggleNav={toggleVisibility} />
-      {!showNav.isVisible ? "" : <Nav />}
+      {!showNav.isVisible ? "" : <Nav toggleOpen={showNav} />}
       <h1 className="title">{title}</h1>
       <Switch>
         <Route exact path="/" component={Home} />
