@@ -40,8 +40,8 @@ nav {
 
   li {
     opacity: 0;
-    transition: opacity 250ms;
-    transition-delay: 800ms;
+    // transition: opacity 250ms;
+    // transition-delay: 800ms;
   }
 
   &.opened {

@@ -17,7 +17,7 @@ function Nav(props) {
   useEffect(toggleOpen);
 
   return (
-    <nav className="overlay opened">
+    <nav className="overlay">
       <ul className="mainnav">
         <li className="mainnav_item">
           <a href="/">Home</a>

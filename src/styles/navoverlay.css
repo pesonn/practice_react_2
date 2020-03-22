@@ -51,8 +51,6 @@ nav ul a:hover {
 }
 nav li {
   opacity: 0;
-  transition: opacity 250ms;
-  transition-delay: 800ms;
 }
 nav.opened {
   clip-path: circle(150vw at 95% 2.5%);
