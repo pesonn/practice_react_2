@@ -1,0 +1,13 @@
+@use "./_index";
+
+.photowall {
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 45%);
+
+  .photowall__img {
+    width: 100%;
+    justify-self: center;
+  }
+}
