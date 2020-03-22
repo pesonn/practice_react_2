@@ -32,7 +32,7 @@ nav {
   -webkit-box-pack: center;
   justify-content: center;
   clip-path: circle(75px at 95% 2.5%);
-  transition: clip-path 600ms ease-in;
+  transition: clip-path 300ms ease-in;
 }
 nav ul li,
 nav ul a,
@@ -51,19 +51,19 @@ nav ul a:hover {
 }
 nav li {
   opacity: 0;
-  transition: opacity 750ms ease-out;
+  transition: opacity 200ms ease-out;
 }
 nav li:nth-child(1) {
-  transition-delay: 500ms;
+  transition-delay: 280ms;
 }
 nav li:nth-child(2) {
-  transition-delay: 580ms;
+  transition-delay: 360ms;
 }
 nav li:nth-child(3) {
-  transition-delay: 660ms;
+  transition-delay: 440ms;
 }
 nav li:nth-child(4) {
-  transition-delay: 740ms;
+  transition-delay: 520ms;
 }
 nav.opened {
   clip-path: circle(200vw at 95% 2.5%);

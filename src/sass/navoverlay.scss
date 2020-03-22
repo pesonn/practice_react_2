@@ -16,7 +16,7 @@ nav {
   -webkit-box-pack: center;
   justify-content: center;
   clip-path: circle(75px at 95% 2.5%);
-  transition: clip-path 600ms ease-in;
+  transition: clip-path 300ms ease-in;
 
   ul {
     li,
@@ -40,8 +40,8 @@ nav {
 
   li {
     opacity: 0;
-    transition: opacity 750ms ease-out;
-    $transition-delay: 500ms;
+    transition: opacity 200ms ease-out;
+    $transition-delay: 280ms;
     $transition-delay-waiting: 80ms;
 
     &:nth-child(1) {
